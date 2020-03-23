@@ -68,8 +68,9 @@ class TrackEditor:
             self.Help = Label(self.root)
             self.Help['text'] = 'Hey Hey Hey\n'
             self.Help['text'] += '1.输入x坐标, y坐标, red或blue 来添加自定义锥筒\n'
-            self.Help['text'] += '2.退出前请先关闭plot\n'
-            self.Help['text'] += '3.对ta好点，ta只是个不成熟的程序～\n'
+            self.Help['text'] += '2.在使用其他功能前请先关闭当前功能的plot，以免报错\n'
+            self.Help['text'] += '3.当出现卡死的情况，果断关闭plot，一切就又好起来了（确信）\n'
+            self.Help['text'] += 'Designed by FGH'
             self.Help.pack()
             #####
     
@@ -140,7 +141,7 @@ class TrackEditor:
             self.data3.append(1)
             plt.clf()
 
-#绘图函数的增加功能, 红色锥桶增加函数
+    #绘图函数的增加功能, 红色锥桶增加函数
     def Matlab_Add_Red(self):
         while (1):
             self.Matlab_Drawing()
@@ -156,7 +157,7 @@ class TrackEditor:
             self.data3.append(2)
             plt.clf()
 
-#添加自定义坐标锥筒
+    #添加自定义坐标锥筒
     def Matlab_Add(self):
         self.Matlab_Drawing()
         m = float(self.Input_x.get())
@@ -175,16 +176,14 @@ class TrackEditor:
         self.Matlab_Drawing()
             
 
-#绘图函数的查看功能（还没做可视化
+#绘图函数的查看功能
     def Matlab_Check(self):
-        temp=0
         while (1): 
-            if temp == 0:
-                self.Matlab_Drawing()
-                temp+=1
+            self.Matlab_Drawing()
             try:
                 [(m,n)]=plt.ginput(1)
             except ValueError:
+                time.sleep(0.1)
                 continue
             for i in range( len(self.data3)-1 ):
                 if abs(self.data1[i] - m) <= 0.5 and abs(self.data2[i] - n) <= 0.5:
@@ -196,6 +195,7 @@ class TrackEditor:
                     self.Txt.insert('end','x='+str(self.data1[i])+'\n'+'y='+str(self.data2[i])+'\n'+color)
                     print(self.data1[i],self.data2[i],self.data3[i])
                     break
+            plt.clf()
 
 #导出
     def Out_Data(self):
