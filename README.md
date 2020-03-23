@@ -17,7 +17,6 @@
     除了上面两条指令之外呢，还要附加一条  
     sudo apt-get install python3-tk
     
-</br>
 ## 效果图：
 ![Image text](https://raw.githubusercontent.com/HRex39/FGH_Track_Editor/master/image/Image_1.png)  
 ## 关于Tkinter:  
