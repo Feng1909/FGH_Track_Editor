@@ -1,11 +1,11 @@
 # FGH_Track_Editor
   开始是个很糟糕的程序，但经过XavierG-Cons同志的修改后好起来了  
-# 功能：  
+## 功能：  
   简单的赛道编辑导入导出，要求输入excel格式xlsx  
   data1：x坐标  
   data2：y坐标  
   data3：左右锥桶（1、2代表锥桶颜色）</br></br>
-# How to use?
+## How to use?
   将需要描点的锥桶数据放置在Map.xlsx中  
     要求格式：  
     第一列：x坐标；第二列：y坐标；第三列：锥桶颜色</br></br>
