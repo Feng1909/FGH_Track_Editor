@@ -5,12 +5,12 @@
   简单的赛道编辑导入导出，要求输入excel格式xlsx  
   data1：x坐标  
   data2：y坐标  
-  data3：左右锥桶（1、2代表锥桶颜色）  
-//Windows：Python3就能跑啦  
+  data3：左右锥桶（1、2代表锥桶颜色）</br></br>
+#Windows：Python3就能跑啦
     pip install openpyxl -i https://pypi.tuna.tsinghua.edu.cn/simple  
     pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple  
-    //用清华的源能快一点  
-//Linux：  
+    //用清华的源能快一点</br></br>
+#Linux：  
     除了上面两条指令之外呢，还要附加一条  
     sudo apt-get install python3-tk  
 //关于Tkinter:  
