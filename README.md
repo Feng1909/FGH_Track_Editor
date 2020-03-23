@@ -6,7 +6,7 @@
   data2：y坐标  
   data3：左右锥桶（1、2代表锥桶颜色）</br></br>
 ## How to use?
-  将需要描点的锥桶数据放置在Map.xlsx中  
+  将需要描点的锥桶数据放置在    Map.xlsx    中  
     要求格式：  
     第一列：x坐标；第二列：y坐标；第三列：锥桶颜色</br></br>
 ## Windows：   
