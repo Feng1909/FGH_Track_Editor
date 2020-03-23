@@ -56,12 +56,11 @@ class TrackEditor:
         self.Out = Button(self.root, text='    导出    ', command=self.Out_Data)
         self.Out.pack()
         #####
-        self.b = Button(self.root, text='    退出    ', command=self.root.quit)
+        self.b = Button(self.root, text='    退出    ', command=self.All_Close)
         self.b.pack()
         #####
         self.Help = Label(self.root)
-        self.Help['text'] = 'Hey Hey Hey\n'
-        self.Help['text'] += '1.输入x坐标, y坐标, red或blue 来添加自定义锥筒\n'
+        self.Help['text'] = '1.输入x坐标, y坐标, red或blue 来添加自定义锥筒\n'
         self.Help['text'] += '2.在使用其他功能前请先刷新，以免报错\n'
         self.Help['text'] += '3.当出现卡死的情况，果断关闭plot，一切就又好起来了（确信）\n'
         self.Help['text'] += 'Designed by FGH'
@@ -210,6 +209,10 @@ class TrackEditor:
         self.in_loop = 0
         self.Matlab_Drawing()
         plt.show()
+# 彻底退出
+    def All_Close(self):
+        plt.close()
+        self.root.quit()
 
 # 导出
     def Out_Data(self):
