@@ -174,7 +174,7 @@ class TrackEditor:
         self.Matlab_Drawing()
         plt.show()
 
-# 绘图函数的查看功能
+    # 绘图函数的查看功能
     def Matlab_Check(self):
         self.Refresh_Loop()
         while (1):
@@ -196,7 +196,7 @@ class TrackEditor:
                     break
             plt.clf()
 
-# 刷新
+    # 刷新
     def Refresh_Loop(self):
         plt.close()
         self.in_loop = 0
@@ -208,13 +208,13 @@ class TrackEditor:
         self.Matlab_Drawing()
         plt.show()
         
-# 彻底退出
+    # 彻底退出
     def All_Close(self):
         plt.close()
         self.root.quit()
         self.root.destroy()
 
-# 导出
+    # 导出
     def Out_Data(self):
         # 行号列号从1开始
         wb = Workbook()
