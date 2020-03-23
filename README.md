@@ -1,5 +1,4 @@
-# FGH_Track_Editor
-  开始是个很糟糕的程序，但经过XavierG-Cons同志的修改后好起来了  
+# FGH_Track_Editor 
 ## 功能：  
   简单的赛道编辑导入导出，要求输入excel格式xlsx  
   data1：x坐标  
