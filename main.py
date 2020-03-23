@@ -21,11 +21,10 @@ class TrackEditor:
         self.Load_Data()
         self.root = Tk()
         self.root.title('赛道编辑器')
+        self.root.geometry("+900+100")
         self.label = Label(self.root)
         self.label['text'] = '\n赛道编辑器\n\n'
         self.label.pack()
-        #####
-        
         #####
         self.Check = Button(self.root, text='查看锥桶位置', command=self.Matlab_Check)
         self.Txt = Text(self.root, height=3, width=20)
@@ -50,7 +49,7 @@ class TrackEditor:
         self.Delete = Button(self.root, text='  删除锥桶  ', command=self.Matlab_Delete)
         self.Delete.pack()
         #####
-        self.Refresh = Button(self.root, text='    刷新    ', command=self.Refresh_Loop)
+        self.Refresh = Button(self.root, text='    刷新    ', command=self.Refresh)
         self.Refresh.pack()
         #####
         self.Out = Button(self.root, text='    导出    ', command=self.Out_Data)
@@ -99,10 +98,7 @@ class TrackEditor:
 
     # 绘图函数的删除功能
     def Matlab_Delete(self):
-        if self.in_loop == 1:
-            return
-        else:
-            self.in_loop = 1
+        self.Refresh_Loop()
         while (1):
             self.Matlab_Drawing()
             try:
@@ -120,10 +116,7 @@ class TrackEditor:
 
     #绘图函数的增加功能, 蓝色锥桶增加函数
     def Matlab_Add_Blue(self):
-        if self.in_loop == 1:
-            return
-        else:
-            self.in_loop = 1
+        self.Refresh_Loop()
         while (1):
             self.Matlab_Drawing()
             try:
@@ -139,10 +132,7 @@ class TrackEditor:
 
     #绘图函数的增加功能, 红色锥桶增加函数
     def Matlab_Add_Red(self):
-        if self.in_loop == 1:
-            return
-        else:
-            self.in_loop = 1
+        self.Refresh_Loop()
         while (1):
             self.Matlab_Drawing()
             try:
@@ -159,8 +149,13 @@ class TrackEditor:
     # 添加自定义坐标锥筒
     def Matlab_Add(self):
         self.Matlab_Drawing()
-        m = float(self.Input_x.get())
-        n = float(self.Input_y.get())
+        try:
+            m = float(self.Input_x.get())
+            n = float(self.Input_y.get())
+        except ValueError or UnboundLocalError:
+            self.root=Tk()
+            self.Output_Check = Button(self.root, text='\n格式有误\n',command=self.root.destroy)
+            self.Output_Check.pack()
         # 避免重复添加
         for i in range(len(self.data3)):
             if m == self.data1[i] and n == self.data2[i]:
@@ -177,13 +172,11 @@ class TrackEditor:
             self.data3.append(1)
         plt.clf()
         self.Matlab_Drawing()
+        plt.show()
 
 # 绘图函数的查看功能
     def Matlab_Check(self):
-        if self.in_loop == 1:
-            return
-        else:
-            self.in_loop = 1
+        self.Refresh_Loop()
         while (1):
             self.Matlab_Drawing()
             try:
@@ -208,7 +201,13 @@ class TrackEditor:
         plt.close()
         self.in_loop = 0
         self.Matlab_Drawing()
+    
+    def Refresh(self):
+        plt.close()
+        self.in_loop = 0
+        self.Matlab_Drawing()
         plt.show()
+        
 # 彻底退出
     def All_Close(self):
         plt.close()
