@@ -212,6 +212,7 @@ class TrackEditor:
     def All_Close(self):
         plt.close()
         self.root.quit()
+        self.root.destroy()
 
 # 导出
     def Out_Data(self):
