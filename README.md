@@ -19,7 +19,7 @@
     sudo apt-get install python3-tk
     </br>
 ## 效果图：
-
+![Image text](https://raw.githubusercontent.com/HRex39/FGH_Track_Editor/master/image/Image_1.png)  
 ## 关于Tkinter:  
   在命令行中运行 python -m tkinter，应该会弹出一个Tk界面的窗口，  
   表明 tkinter 包已经正确安装，而且告诉你 Tcl/Tk 的版本号，  
