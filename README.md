@@ -4,6 +4,7 @@
 ![image](https://img.shields.io/badge/tester-Spencer1909-orange.svg)  
 ![image](https://img.shields.io/badge/python-3.5.2-blue.svg)
 ![image](https://img.shields.io/badge/python-3.6.6-blue.svg)
+![image](https://img.shields.io/badge/python-3.8.2-blue.svg)
 ## 功能：  
   简单的赛道编辑导入导出，要求输入excel格式xlsx  
   data1：x坐标  
