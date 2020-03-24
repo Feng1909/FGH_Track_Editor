@@ -6,7 +6,7 @@
 ![image](https://img.shields.io/badge/python-3.6.6-green.svg)
 ![image](https://img.shields.io/badge/python-3.7.4-green.svg)
 ![image](https://img.shields.io/badge/python-3.8.2-green.svg)  
-![image](https://img.shields.io/badge/python-anaconda?-red.svg)
+![image](https://img.shields.io/badge/anaconda-python-red.svg)  
 ## 功能：  
   简单的赛道编辑导入导出，要求输入excel格式xlsx  
   data1：x坐标  
