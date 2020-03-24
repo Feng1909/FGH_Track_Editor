@@ -1,4 +1,6 @@
 # FGH_Track_Editor 
+![image](https://img.shields.io/badge/author-XavierG_Cons-orange.svg)
+![image](https://img.shields.io/badge/author-HRex39-orange.svg)  
 ![image](https://img.shields.io/badge/python-3.5.2-blue.svg)
 ![image](https://img.shields.io/badge/python-3.6.6-blue.svg)
 ## 功能：  
